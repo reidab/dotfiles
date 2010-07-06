@@ -1,5 +1,10 @@
 # .bash_profile is executed for login shells, .bashrc for non-login shells
 
+# Source global definitions
+if [ -f /etc/profile ]; then
+	. /etc/profile
+fi
+
 # include .bashrc if it exists
 if [ -f "$HOME/.bashrc" ]; then
 . "$HOME/.bashrc"

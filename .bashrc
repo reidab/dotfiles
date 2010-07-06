@@ -1,6 +1,9 @@
 # .bash_profile is executed for login shells, .bashrc for non-login shells
 
-source /etc/profile
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
 
 ####################################
 # Global
