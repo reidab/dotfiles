@@ -29,6 +29,9 @@ WHITE="\[\033[1;37m\]"
 UNDERLINE="\[\033[4m\]"
 NO_COLOUR="\[\033[0m\]"
 
+INVERSE="\e[7m"
+NORMAL="\e[m"
+
 function parse_git_branch {
   if [ $(which git-symbolic-ref) ]; then
     ref=$(git-symbolic-ref HEAD 2> /dev/null) || return
@@ -48,7 +51,13 @@ function rvm_prompt_reidab {
 }
 
 function prompt {
-  PS1="$WHITE\n[$PURPLE\h $WHITE\$(return_value_indicator) $BLUE\w$RED\$(parse_git_branch)$YELLOW\$(rvm_prompt_reidab)$WHITE] \n$GREEN\u$WHITE\$ $WHITE"
+  case $HOSTNAME in
+    reid-macbook ) host_section="$PURPLE\h";;
+    green ) host_section="$GREEN$INVERSE\h$NORMAL";;
+    blue ) host_section="$BLUE$INVERSE\h$NORMAL";;
+    * ) host_section="$INVERSE\h$NORMAL"
+  esac
+  PS1="$WHITE\n[$host_section $WHITE\$(return_value_indicator) $BLUE\w$RED\$(parse_git_branch)$YELLOW\$(rvm_prompt_reidab)$WHITE] \n$GREEN\u$WHITE\$ $WHITE"
 }
 
 # set the prompt
