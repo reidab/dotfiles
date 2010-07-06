@@ -1,0 +1,63 @@
+[user]
+  name = Reid Beels
+  email = mail@reidbeels.com
+[github]
+  user = reidab
+  token = >nope<
+[core]
+   excludesfile = ~/.gitignore
+[apply]
+   whitespace = fix
+[help]
+   autocorrect = -1
+[instaweb]
+   httpd = webrick
+[merge]
+   tool = opendiff
+
+
+[alias]
+   b = branch
+   ba = branch -a
+   ci = commit
+   co = checkout
+   d = diff
+   dc = diff --cached
+   fp = format-patch
+   g = log --graph
+   go = log --graph --pretty=oneline --abbrev-commit
+   k = !gitk &
+   ka = !gitk --all &
+   lp = log --patch-with-stat
+   mnf = merge --no-ff
+   mnff = merge --no-ff
+   mt = mergetool
+   p = format-patch -1
+   sra = svn rebase --all
+   sh = !git-sh
+   st = status
+   ls = status
+   stm = status --untracked=no
+   cp = cherry-pick
+
+
+[color]
+   ui = auto
+   pager = true
+[color.branch]
+   remote = blue
+   local = cyan
+   current = red
+   plain = yellow
+[color.diff]
+   old = reverse red
+   new = reverse green
+[color.interactive]
+   prompt = green
+   header = cyan
+   help = yellow
+[color.status]
+   untracked = yellow
+   nobranch = reverse red
+[achievement]
+	upload = true
