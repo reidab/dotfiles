@@ -53,6 +53,7 @@ antigen apply
 #--[ Aliases ]-----------------------------------------------------------------
 
 alias zshconfig="vimr -s ~/.zshrc"
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # search running processes
 alias pgrep='ps aux | grep -i '
