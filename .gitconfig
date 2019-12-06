@@ -1,78 +1,79 @@
 [user]
-  name = Reid Beels
-  email = mail@reidbeels.com
-  signingkey = 043DC8B9446C8ADE
+	name = Reid Beels
+	email = mail@reidbeels.com
+	signingkey = 043DC8B9446C8ADE
 [includeIf "gitdir:~/code/thedyrt/"]
-  path = .gitconfig-thedyrt
+	path = .gitconfig-thedyrt
 [include]
-  path = .gitconfig-github
+	path = .gitconfig-github
 [core]
-  editor = "nvim --noplugin"
-  trustctime = false
-  ignorecase = false
+	editor = "nvim --noplugin"
+	trustctime = false
+	ignorecase = false
+	excludesfile = /Users/reidab/.config/git/ignore
 [apply]
-   whitespace = fix
+	whitespace = fix
 [help]
-   autocorrect = -1
+	autocorrect = -1
 [instaweb]
-   httpd = webrick
+	httpd = webrick
 [merge]
-   tool = opendiff
+	tool = opendiff
 [alias]
-   b = branch
-   ba = branch -a
-   ci = commit
-   co = checkout
-   d = diff
-   dc = diff --cached
-   fp = format-patch
-   g = log --graph
-   go = log --graph --pretty=oneline --abbrev-commit
-   k = !gitk &
-   ka = !gitk --all &
-   lp = log --patch-with-stat
-   mnf = merge --no-ff
-   mnff = merge --no-ff
-   mt = mergetool
-   p = format-patch -1
-   sra = svn rebase --all
-   sh = !git-sh
-   st = status
-   ls = status
-   stm = status --untracked=no
-   cp = cherry-pick
+	b = branch
+	ba = branch -a
+	ci = commit
+	co = checkout
+	d = diff
+	dc = diff --cached
+	fp = format-patch
+	g = log --graph
+	go = log --graph --pretty=oneline --abbrev-commit
+	k = !gitk &
+	ka = !gitk --all &
+	lp = log --patch-with-stat
+	mnf = merge --no-ff
+	mnff = merge --no-ff
+	mt = mergetool
+	p = format-patch -1
+	sra = svn rebase --all
+	sh = !git-sh
+	st = status
+	ls = status
+	stm = status --untracked=no
+	cp = cherry-pick
 [color]
-   ui = auto
-   pager = true
+	ui = auto
+	pager = true
 [color.branch]
-   remote = blue
-   local = cyan
-   current = red
-   plain = yellow
+	remote = blue
+	local = cyan
+	current = red
+	plain = yellow
 [color.diff]
-   old = reverse red
-   new = reverse green
+	old = reverse red
+	new = reverse green
 [color.interactive]
-   prompt = green
-   header = cyan
-   help = yellow
+	prompt = green
+	header = cyan
+	help = yellow
 [color.status]
-   untracked = yellow
-   nobranch = reverse red
+	untracked = yellow
+	nobranch = reverse red
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path =
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
-  required = true
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
 [push]
-  default = simple
+	default = simple
 [commit]
-  template = /Users/reidab/.stCommitMsg
-  gpgsign = true
+	template = /Users/reidab/.stCommitMsg
+	gpgsign = true
 [diff "sopsdiffer"]
-  textconv = sops -d
+	textconv = sops -d
