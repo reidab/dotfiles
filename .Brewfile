@@ -1,99 +1,79 @@
-
+tap "adoptopenjdk/openjdk"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-versions"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-
-tap "heroku/brew"
-brew "heroku/brew/heroku"
-
 tap "johanhaleby/kubetail"
-brew "johanhaleby/kubetail/kubetail"
-
+tap "rconroy293/seventeenlands"
 brew "antigen"
 brew "aria2"
 brew "autojump"
-brew "readline"
-brew "sqlite"
-brew "xz"
 brew "awscli"
-brew "pcre"
+brew "cocoapods"
 brew "composer"
-brew "figlet"
-brew "findutils"
 brew "fzf"
-brew "gdal"
-brew "gist"
-brew "git"
+brew "gh"
 brew "git-extras"
-brew "git-lfs"
-brew "gnu-getopt"
-brew "geos"
-brew "gdal"
 brew "go"
-brew "gpp"
 brew "graphviz"
 brew "helm"
-brew "helmfile"
 brew "httpie"
-brew "hub"
 brew "jq"
 brew "mas"
 brew "mysql-client", link: true
 brew "neovim"
+brew "node-build"
 brew "nodenv"
-brew "postgresql@9.6"
-brew "proj"
+brew "postgresql@12", restart_service: true, link: true
+brew "pv"
 brew "pyenv"
 brew "ruby-build"
 brew "rbenv"
-brew "rbenv-ctags"
-brew "rbenv-whatis"
 brew "redis", restart_service: true
 brew "ripgrep"
+brew "rust"
+brew "shared-mime-info"
 brew "sops"
+brew "starship"
 brew "telnet"
 brew "terraform"
-brew "the_silver_searcher"
+brew "tree"
 brew "watchman"
 brew "wget"
 brew "xsv"
 brew "yarn"
-brew "zlib"
+brew "youtube-dl"
 brew "zsh"
-
-cask "1password"
-cask "1password-cli"
-cask "abstract"
-cask "adobe-creative-cloud"
-cask "bettertouchtool"
-cask "carbon-copy-cloner"
+brew "johanhaleby/kubetail/kubetail"
+brew "rconroy293/seventeenlands/seventeenlands"
+cask "adoptopenjdk11"
+cask "android-studio"
+cask "apparency"
+cask "bartender"
+cask "betterzip"
 cask "dash"
 cask "discord"
 cask "docker"
-cask "dropbox"
 cask "epic-games"
-cask "facebook-ios-sdk"
+cask "figma"
 cask "firefox"
-cask "flycut"
+cask "font-meslo-lg-nerd-font"
 cask "google-chrome"
 cask "google-cloud-sdk"
-cask "google-drive-file-stream"
-cask "gpg-suite"
+cask "gpg-suite-no-mail"
 cask "grandperspective"
-cask "iina"
+cask "infra"
 cask "iterm2"
 cask "itsycal"
-cask "java8"
 cask "keybase"
-cask "kubernetic"
-cask "little-snitch"
 cask "macdown"
-cask "openscad"
+cask "mimestream"
+cask "monitorcontrol"
 cask "paw"
 cask "postico"
 cask "provisionql"
+cask "proxyman"
 cask "qgis"
 cask "qlcolorcode"
 cask "qlimagesize"
@@ -103,48 +83,33 @@ cask "qlvideo"
 cask "quicklook-json"
 cask "quicklookapk"
 cask "quicklookase"
-cask "react-native-debugger"
+cask "raycast"
 cask "rightfont"
-cask "safari-technology-preview"
-cask "sequel-pro"
-cask "shiftit"
-cask "sketch"
+cask "secretive"
 cask "slack"
 cask "sourcetree"
 cask "steam"
 cask "suspicious-package"
 cask "transmit"
-cask "transmission"
 cask "vimr"
 cask "visual-studio-code"
-cask "xquartz"
-
-# cask "bricklink-studio"
-
-# Monitor data's progress through a pipe
-brew "pv"
-
+cask "zoom"
+mas "AdGuard for Safari", id: 1440147259
 mas "Affinity Designer", id: 824171161
-mas "Bear", id: 1091189122
-mas "bookmarker for pinboard", id: 1451400394
 mas "GarageBand", id: 682658836
-mas "GhosteryLite", id: 1436953057
-mas "Honey", id: 1472777122
+mas "Hush", id: 1544743900
 mas "iMovie", id: 408981434
 mas "JSONPeep", id: 1458969831
 mas "Keynote", id: 409183694
+mas "NordVPN IKE", id: 1116599239
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "PinButton", id: 1467460892
+mas "Peek", id: 1554235898
 mas "Pixelmator", id: 407963104
 mas "Reeder", id: 880001334
 mas "Remote Desktop", id: 409907375
-mas "The Unarchiver", id: 425424353
+mas "RSS Bot", id: 605732865
 mas "Things", id: 904280696
+mas "Tot", id: 1491071483
 mas "Tweetbot", id: 1384080005
 mas "Xcode", id: 497799835
-
-# alt PG 9.6 install
-# tap "cloverhealth/tap"
-# brew "cloverhealth/tap/postgresql"
-# brew "cloverhealth/tap/postgis", link: false

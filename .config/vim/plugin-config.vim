@@ -83,8 +83,8 @@ let g:gist_post_private = 1
 "" deoplete
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
-  let g:deoplete#omni#input_patterns = {}
-  let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
+  " let g:deoplete#omni#input_patterns = {}
+  " let g:deoplete#omni#input_patterns.javascript = '[^. *\t]\.\w*'
 
   " let g:deoplete#omni#functions = {}
   " let g:deoplete#omni#functions.javascript = [
