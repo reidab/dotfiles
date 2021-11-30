@@ -20,7 +20,7 @@ COMPLETION_WAITING_DOTS=true
 
 # Load Antigen and specify bundles
 
-source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
@@ -32,7 +32,7 @@ antigen bundles <<EOBUNDLES
   extract
   gem
   git-extras
-  osx
+  macos
   rails
   bundler
   rake-fast
