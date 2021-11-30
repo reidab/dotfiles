@@ -8,6 +8,8 @@ fi
 
 disable log
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 [ -r "/etc/zshrc_$TERM_PROGRAM" ] && . "/etc/zshrc_$TERM_PROGRAM"
 
 # Fix the ZSH help path
@@ -111,4 +113,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 eval "$(starship init zsh)"
 
-export PATH="$HOME/.poetry/bin:$PATH"

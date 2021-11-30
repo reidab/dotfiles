@@ -7,6 +7,10 @@ if [ -x /usr/libexec/path_helper ]; then
 	eval `/usr/libexec/path_helper -s`
 fi
 
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export BUNDLER_EDITOR="vimr -n"
 export EDITOR="nvim"
@@ -26,13 +30,14 @@ export GOPATH=$HOME/code/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="$HOME/.poetry/bin:$PATH"
 
 if which nodenv > /dev/null; then
-  eval "$(nodenv init -)";
   export PATH=$(yarn global bin):$PATH
+  eval "$(nodenv init -)";
 fi
 
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null; then eval "$(pyenv init --path)"; fi
 if which rbenv > /dev/null; then eval "$(rbenv init - --no-rehash)"; fi
 
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then . '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'; fi
