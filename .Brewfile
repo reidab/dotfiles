@@ -32,6 +32,7 @@ brew "ruby-build"
 brew "rbenv"
 brew "redis", restart_service: true
 brew "ripgrep"
+brew "rust"
 brew "shared-mime-info"
 brew "sops"
 brew "starship"
